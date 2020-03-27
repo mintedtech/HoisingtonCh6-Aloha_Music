@@ -6,16 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/imgUkelele"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="0dp"
         android:layout_marginStart="@dimen/standard_margin"
         android:layout_marginLeft="@dimen/standard_margin"
-        android:layout_marginTop="@dimen/standard_margin"
         android:layout_marginEnd="@dimen/standard_margin"
         android:layout_marginRight="@dimen/standard_margin"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
         android:contentDescription="@string/ukulele"
+        app:layout_constraintBottom_toTopOf="@+id/btnUkulele"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,28 +31,37 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/standard_margin"
         android:layout_marginLeft="@dimen/standard_margin"
-        android:layout_marginTop="@dimen/standard_margin"
         android:layout_marginEnd="@dimen/standard_margin"
         android:layout_marginRight="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/double_margin"
         android:text="@string/btnUkulele"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgUkelele" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
     <ImageView
         android:id="@+id/imgDrums"
         android:layout_width="0dp"
-        android:layout_height="165dp"
+        android:layout_height="0dp"
         android:layout_marginStart="@dimen/standard_margin"
         android:layout_marginLeft="@dimen/standard_margin"
         android:layout_marginTop="@dimen/double_margin"
         android:layout_marginEnd="@dimen/standard_margin"
         android:layout_marginRight="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
         android:contentDescription="@string/drums"
+        app:layout_constraintBottom_toTopOf="@+id/btnDrums"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnUkulele"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:srcCompat="@drawable/drums" />
 
     <Button
@@ -59,12 +71,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/standard_margin"
         android:layout_marginLeft="@dimen/standard_margin"
-        android:layout_marginTop="@dimen/standard_margin"
         android:layout_marginEnd="@dimen/standard_margin"
         android:layout_marginRight="@dimen/standard_margin"
+        android:layout_marginBottom="@dimen/standard_margin"
         android:text="@string/btnDrums"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgDrums" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
